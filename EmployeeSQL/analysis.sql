@@ -6,8 +6,8 @@ WHERE e.id = s.emp_id;
 
 --2. List employees who were hired in 1986.
 
-SELECT e.id as employee_number, e.first_name, e.last_name, e.hire_date
-FROM employee as e
+SELECT id as employee_number, first_name, last_name, hire_date
+FROM employee
 WHERE hire_date > '12-31-1985'::date AND hire_date < '01-01-1987'::date
 ORDER BY hire_date;
 
@@ -25,9 +25,9 @@ WHERE e.id = de.emp_id AND d.id = de.dept_id;
 
 --5. List all employees whose first name is "Hercules" and last names begin with "B."
 
-SELECT e.first_name, e.last_name
-FROM employee as e
-WHERE e.first_name = 'Hercules' AND e.last_name LIKE 'B%';
+SELECT first_name, last_name
+FROM employee
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
 
 --6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
