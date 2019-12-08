@@ -1,21 +1,15 @@
 CREATE TABLE Department (
-    id VARCHAR(8)   NOT NULL,
-    name VARCHAR(30)   NOT NULL,
-    CONSTRAINT pk_Department PRIMARY KEY (
-        id
-     )
+    id VARCHAR(8) PRIMARY KEY  NOT NULL,
+    name VARCHAR(30)   NOT NULL
 );
 
 CREATE TABLE Employee (
-    id INT   NOT NULL,
+    id INT PRIMARY KEY  NOT NULL,
     birthdate DATE   NOT NULL,
     first_name VARCHAR(30)   NOT NULL,
     last_name VARCHAR(30)   NOT NULL,
     gender VARCHAR   NOT NULL,
-    hire_date DATE   NOT NULL,
-    CONSTRAINT pk_Employee PRIMARY KEY (
-        id
-     )
+    hire_date DATE   NOT NULL
 );
 
 CREATE TABLE Salaries (
@@ -64,3 +58,4 @@ REFERENCES Department (id);
 ALTER TABLE Dept_Mgr ADD CONSTRAINT fk_Dept_Mgr_emp_id FOREIGN KEY(emp_id)
 REFERENCES Employee (id);
 
+--See the note in the top of analysis.sql re:primary keys not created by this file.
