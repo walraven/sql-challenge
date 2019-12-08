@@ -1,9 +1,9 @@
 --The assignment calls for each table to have a primary key. These primary keys in dept_emp, dept_mgr, salaries,
 --  and titles weren't needed during the analysis, but are required for the assignment. The queries below must be
---  run after importing the Data in pgAdmin, being sure to exclude the "id" column during import. If one were to
---  create the database and include the queries below in the schema.sql file, the import in pgAdmin fails unless
---  you exclude the id column, but, for some reason, pgAdmin doesn't populate the id column when you do this. The
---  queries below will create and populate the primary key columns for their respective tables as required.
+--  run after importing the Data in pgAdmin. If one were to create the database and include the queries below in
+--  the schema.sql file, the import in pgAdmin fails unless you exclude the id column, but, for some reason,
+--  pgAdmin doesn't populate the id column when you do this. The queries below will create and populate the 
+--  primary key columns for their respective tables as required by the assignment.
 
 ALTER TABLE titles ADD COLUMN id SERIAL PRIMARY KEY;
 ALTER TABLE dept_emp ADD COLUMN id SERIAL PRIMARY KEY;

@@ -58,4 +58,4 @@ REFERENCES Department (id);
 ALTER TABLE Dept_Mgr ADD CONSTRAINT fk_Dept_Mgr_emp_id FOREIGN KEY(emp_id)
 REFERENCES Employee (id);
 
---See the note in the top of analysis.sql re:primary keys not created by this file.
+--See the note in the top of analysis.sql regarding primary keys not created by this file.
