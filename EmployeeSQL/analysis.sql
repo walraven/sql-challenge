@@ -51,7 +51,8 @@ WHERE d.id = de.dept_id AND e.id = de.emp_id AND d.name = 'Sales';
 
 SELECT d.name, e.id as employee_number, e.last_name, e.first_name
 FROM department as d, employee as e, dept_emp as de
-WHERE d.id = de.dept_id AND e.id = de.emp_id AND (d.name = 'Sales' OR d.name='Development');
+WHERE d.id = de.dept_id AND e.id = de.emp_id AND (d.name = 'Sales' OR d.name='Development')
+ORDER BY d.name DESC;
 
 --8. In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
 
